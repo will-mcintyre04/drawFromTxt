@@ -34,14 +34,14 @@ It displays the drawing to the console.
 	const int CONSTANT_ROWS = 200;
 	
 	//Create blank 2D array for the drawing to store characters
-	char drawing[CONSTANT_ROWS][CONSTANT_COLUMNS] = {' '};
+	string drawing[CONSTANT_ROWS][CONSTANT_COLUMNS];
 
 	//Read through input file and fill up drawing array
 	int rows = 0;
 	FileIn>>rows;
 	int indexRow = 0;
 	int indexColumn = 0;
-	char character = ' ';
+	string character = " ";
 	while(FileIn >> indexRow >> indexColumn >> character)
 	{
 		drawing[indexRow][indexColumn] = character;
@@ -52,7 +52,10 @@ It displays the drawing to the console.
 	{
 		for(int column = 0; column < CONSTANT_COLUMNS; column++)
 		{
-			cout<<drawing[row][column];
+            if(drawing[row][column] == ""){
+                cout<<" ";
+            }
+            else{cout<<drawing[row][column];}
 		}
 		cout<<endl;
 	}
