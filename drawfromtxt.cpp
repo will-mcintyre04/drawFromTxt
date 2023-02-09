@@ -63,3 +63,14 @@ It displays the drawing to the console.
 	FileIn.close();
 	return EXIT_SUCCESS;
 }
+
+/*
+Output with heart_mapped.txt input.
+
+Enter file name: heart_mapped.txt
+                   .-.  .-.
+                  |   \/   |
+                  \        /
+                   `\    /`
+               wm!   `\/`
+*/
